@@ -8,7 +8,10 @@
   - [React](#react)
   - [Redux](#redux)
   - [GBComponents](#gbcomponents)
-- [Git workflow](#git-workflow)
+- [Git](#git)
+  -[Commandes basiques](#commandes-basiques)
+  -[Précisions](#précisions)
+  -[Pour aller plus loin](#pour-aller-plus-loin)
 
 ## Prérequis
 J'ai créé le projet avec `create-react-app` (CRA).
@@ -104,7 +107,6 @@ import {  handleModeChange,
 ```
 Ce bout de code permet d'importer les actions Redux de mon GBCalculator
 
-
 ```
 const mapDispatchToProps = dispatch => bindActionCreators({
   handleModeChange,
@@ -120,12 +122,10 @@ const mapDispatchToProps = dispatch => bindActionCreators({
 ```
 Ce bout ce code montre comment les binder afin de pouvoir les utiliser dans les composants
 
-
 ```
 onAgeChange={props.handleAgeChange}
 ```
 Celui-ci montre comment les utiliser à l'intérieur des composants React
-
 
 ```
 const mapStateToProps = ({ GBCalculator }) => ({
@@ -145,12 +145,10 @@ const mapStateToProps = ({ GBCalculator }) => ({
 ```
 Tu peux voir ici  comment récupérer des données stockées dans le store
 
-
 ```
 age={props.age}
 ```
 Et ici comment les récupérer pour, par exemple, les afficher dans un composant
-
 
 ```
 export default connect(
@@ -162,10 +160,67 @@ L'export a été modifié afin de connecter le composant du fichier à Redux
 
 Tu peux aller voir les actions et reducers dans *`src/modules/GBCalculator.js`*
 
-## Git workflow
+## Git
 
-En cours de construction.
-Je dois d'abord refaire mes bases.
-En attendant teste des modifs en local pour bien t'approprier le code et comprendre comment ça fonctionne. Tu peux commit en local mais ne fait pas de push sur le master. Je m'occupe de créer une branche develop et tout le bordel qui va avec.
+### Commandes basiques
+Les commandes suivantes permettent de configurer Git:
+* `git config --global user.name "Votre nom ou pseudo"`
+* `git config --global user.email "votre@email.com"`
 
-Bon codage !
+Récupérer le repo distant (se placer dans le dossier où l'on souhaite l'installer):
+* `git clone https://github.com/GBrothersOne/gb-nutri-guide.git`
+
+Se placer à l'intérieur du dossier récupéré:
+* `cd gb-nutri-guide`
+
+Créer une branche locale develop et régler le repo local dessus:
+* `git checkout -b develop`
+
+Câbler notre branche locale develop sur celle du repo distant par défaut (comme ça les prochains push / pull seront fait dessus automatiquement):
+* `git branch -u origin/develop`
+
+Une fois que des modif ont été faites, les ajouter au suivi avec la commande:
+* `git add .`
+
+Puis enregistrer un commit (il faut *impérativement* un message concis et clair):
+* `git commit -m "message de commit"`
+
+Lorsqu'une fonctionnalité complète a été développée, il faut l'envoyer sur le repo distant:
+* `git push` (si la branche locale a été au préalable câblée par défaut sur la bonne branche distante)
+
+Pour vérifier que notre branche locale est à jour, il faut commencer par récupérer les informations de la branche distante:
+* `git fetch`
+
+Ensuite, il est possible de consulter l'état de notre repo pour savoir si il est à jour:
+* `git status`
+
+Si notre repo n'est pas à jour, il faut 'tirer' le code depuis le repo distant:
+* `git pull` (si la branche locale a été au préalable câblée par défaut sur la bonne branche distante)
+
+A tout moment, l'historique du repo local peut être consulté avec:
+* `git log`
+
+### Précisions
+La commande `git checkout -b develop` peut être décomposée en deux étapes:
+* `git branch develop` pour créer la nouvelle branche
+* `git checkout develop` pour se positionner dessus
+
+Si tu n'as pas configuré de branche par défaut ou souhaite push/pull sur une branche ou remote différents de ceux configurés, tu peux utiliser les commandes complètes:
+* `git pull origin develop` -> récupérer le code de la branche develop située sur la remote distante origin
+* `git push origin develop` -> envoyer le code de la branche locale sur la branche develop située sur la remote distante origin
+
+Si tu souhaite travailler sur une autre remote, tu peux en ajouter une nouvelle:
+* `git remote add "nom choisi" "url de la remote"`
+
+Tu peux aussi changer le nom d'une remote existante:
+* `git remote set-url "nom de la remote" "nouvelle url"`
+
+Ou voir les remotes existantes:
+* `git remote -v`
+
+### Pour aller plus loin
+Si tu souhaite progresser et maîtriser Git pour évoluer dans un environnement professionnel, il faut maîtriser les notions de workflow et d'historique propres. Ce qui ne sera pas le cas avec la méthode que nous allons utiliser. Je te conseille donc de te renseigner sur les commandes suivantes et les concepts qui y sont associés:
+* `git commit --amend`
+* `git merge`
+* `git rebase`
+* `git cherry-pick`
