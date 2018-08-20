@@ -9,9 +9,9 @@
   - [Redux](#redux)
   - [GBComponents](#gbcomponents)
 - [Git](#git)
-  -[Commandes basiques](#commandes-basiques)
-  -[Précisions](#précisions)
-  -[Pour aller plus loin](#pour-aller-plus-loin)
+  - [Commandes basiques](#commandes-basiques)
+  - [Précisions](#précisions)
+  - [Pour aller plus loin](#pour-aller-plus-loin)
 
 ## Prérequis
 J'ai créé le projet avec `create-react-app` (CRA).
