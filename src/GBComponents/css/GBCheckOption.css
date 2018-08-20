@@ -1,0 +1,64 @@
+/* Container */
+.GBCheckOption {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	display: block;
+	position: relative;
+	padding-left: 25px;
+	margin: 5px;
+}
+
+/* Hide default browser's checkbox */
+.GBCheckOption input {
+	position: absolute;
+	opacity: 0;
+}
+
+/* Create custom box */
+.GBCheckOptionMark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 15px;
+	width: 15px;
+
+	background-color: rgba(5,14,24,0.8);
+	border: 1px solid rgb(81,87,93);
+	border-radius: 2px;
+}
+
+.GBCheckOption:hover input ~ .GBCheckOptionMark {
+	border-color: rgb(131,136,140);
+}
+
+.GBCheckOption input:focus ~ .GBCheckOptionMark {
+	border-color: rgb(30,95,153);
+}
+
+/* Create indicator and hide it */
+.GBCheckOptionMark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show indicator when checked */
+.GBCheckOption input:checked ~ .GBCheckOptionMark:after {
+	display: block;
+}
+
+/* Style the indicator */
+.GBCheckOption .GBCheckOptionMark:after {
+	left: 4px;
+	top: 0px;
+	width: 4px;
+	height: 8px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}

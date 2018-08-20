@@ -1,0 +1,28 @@
+.GBPushButton {
+	outline: none;
+	color: white;
+	cursor: pointer;
+
+	width: 190px;
+
+	margin: 5px;
+	padding: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+
+	background-color: rgb(0,92,153);
+	border: 1px solid rgb(14,134,202);
+	border-radius: 2px;
+}
+
+.GBPushButton:hover {
+	background-color: rgb(0,122,204);
+	border-color: rgb(0,174,255);
+}
+
+.GBPushButton:disabled {
+	cursor: default;
+	background-color: rgba(5,14,24,0.8);
+	border-color: rgb(30,95,153);
+	color: rgb(30,95,153);
+}

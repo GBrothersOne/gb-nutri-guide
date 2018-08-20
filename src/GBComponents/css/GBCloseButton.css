@@ -1,0 +1,42 @@
+.GBCloseButton {
+	outline: none;
+	cursor: pointer;
+
+	width: 18px;
+	height: 18px;
+
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	padding: 0px;
+	margin: 3px;
+
+	background-color: transparent;
+	border: none;
+	opacity: 0.4;
+}
+
+.GBCloseButton:hover {
+	opacity: 1;
+}
+
+.GBCloseButton:before, .GBCloseButton:after {
+	content: '';
+
+	width: 3px;
+	height: 18px;
+
+	position: absolute;
+	top: 0px;
+	right: 7px;
+
+	background-color: white;
+}
+
+.GBCloseButton:before {
+  transform: rotate(-45deg);
+}
+
+.GBCloseButton:after {
+  transform: rotate(45deg);
+}
