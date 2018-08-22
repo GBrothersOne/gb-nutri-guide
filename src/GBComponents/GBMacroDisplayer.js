@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 
 const GBEnergyDisplayer = ({ label, value, unit }) => (
 	<div className='horizontalContainer'>
-		<span className='macroLabel'>{label}:</span>
-		<span className='macroAmountArea'>
+		<div className='macroLabel'>{label}:</div>
+		<div className='macroAmountArea'>
 			<span className='macroValue'>{value}</span> {unit}
-		</span>
+		</div>
 	</div>
 )
 

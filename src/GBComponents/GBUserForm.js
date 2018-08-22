@@ -9,7 +9,7 @@ import GBActivityInput from './GBActivityInput'
 import GBAimInput from './GBAimInput'
 
 // Visual texts
-const TITLE = 'CRÉER UN BILAN'
+const TITLE = 'DONNÉES DE CALCUL'
 const SEX_LABEL_MALE = 'Homme'
 const SEX_LABEL_FEMALE = 'Femme'
 const AGE_PLACEHOLDER = 'Age'
