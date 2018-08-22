@@ -25,7 +25,7 @@ const RT_LP_BULK = 1.4
 const DEF_BDF = 20
 
 const initialState = {
-  mode: 'menuMaker',
+  mode: 'form',
   sex: 'male',
   age: '',
   height: '',
