@@ -18,7 +18,7 @@ import {  handleModeChange,
           handleActivityChange, } from '../../modules/GBCalculator'
 
 const Home = (props) => (
-  <div>
+  <div className='verticalContainer'>
     <GBUserForm
       mode={props.mode}
       sex={props.sex}

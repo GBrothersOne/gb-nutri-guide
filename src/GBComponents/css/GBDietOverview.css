@@ -6,6 +6,7 @@
 	flex-direction: column;
 	align-items: center;
 	position: relative;
+	text-align: center;
 
 	padding: 15px;
 	margin: 10px;
@@ -26,6 +27,10 @@
 }
 
 .bubbleContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
 	margin: 10px;
 	width: 90px;
 	height: 90px;
@@ -43,6 +48,10 @@
 }
 
 .macroLabel {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
 	width: 85px;
 }
 

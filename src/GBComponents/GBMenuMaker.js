@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import GBMacroDisplayer from './GBMacroDisplayer'
 
 const BUTTON_READY = 'Création de menu'
 const BUTTON_NOT_READY = 'Formulaire incomplet'
@@ -30,7 +31,32 @@ class GBMenuMaker extends Component {
 						className='GBCloseButton'
 						onClick={this.handleCloseClick} >
 					</button>
-					<div className='overviewTitle'>En construction...</div>
+					<div className='formTitle'>Créer un menu</div>
+					<div className='separator'></div>
+					<div className='horizontalContainer'>
+						<div className='mealBox'>Petit déjeuner</div>
+						<div className='mealBox'>Souper</div>
+						<div className='mealBox'>Collations</div>
+					</div>
+					<div className='activeMealBox'>
+						Déjeuner
+						<GBMacroDisplayer
+						label="Brocoli"
+						value={250}
+						unit="g" />
+						<GBMacroDisplayer
+						label="Poulet"
+						value={250}
+						unit="g" />
+						<GBMacroDisplayer
+						label="Riz"
+						value={250}
+						unit="g" />
+						<GBMacroDisplayer
+						label="Huile d'olive"
+						value={250}
+						unit="g" />
+					</div>
 				</div>
 			)
 		}
