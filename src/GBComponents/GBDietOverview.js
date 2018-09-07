@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import PropTypes from 'prop-types'
 import GBEnergyDisplayer from './GBEnergyDisplayer'
 import GBMacroDisplayer from './GBMacroDisplayer'
 
@@ -9,7 +8,6 @@ const BUTTON_NOT_READY = 'Formulaire incomplet'
 const TITLE = 'BILAN NUTRITIONNEL'
 const AJR_LABEL = 'Apport énergétique recommandé'
 const AJR_UNIT = 'kcal/jour'
-const MACROS_LABEL = 'Répartition'
 const MACROS_UNIT = 'g'
 const MACROS_PR = 'Protéines'
 const MACROS_LP = 'Lipides'
@@ -18,10 +16,6 @@ const AJR_INFO = '* Apports totaux journaliers'
 
 
 class GBDietOverview extends Component {
-
-	static propTypes = {
-
-	}
 
 	handleButtonClick = (event) => {
 		this.props.onModeChange('overview')

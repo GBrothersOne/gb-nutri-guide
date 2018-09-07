@@ -1,0 +1,41 @@
+.GBMenuElement {
+	position:relative;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	text-align: left;
+	padding: 5px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	margin: 2px;
+	width: 200px;
+	background-color: rgba(255,255,255,0.2);
+	border-radius: 2px;
+}
+
+.GBMenuElementQuantity {
+	outline: none;
+	border:none;
+	text-align: center;
+	
+	font-size: 0.96em;
+	
+	width: 45px;
+	height: 16px;
+
+	padding: 1px;
+	margin-left: auto;
+	margin-right: 5px;
+
+	background-color: rgba(5,14,24,0.5);
+	border-radius: 2px;
+}
+
+.GBMenuElementUnit {
+	overflow: hidden;
+
+	width: 30px;
+
+	margin-right: 15px;
+}

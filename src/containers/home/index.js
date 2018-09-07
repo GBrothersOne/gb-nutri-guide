@@ -2,8 +2,8 @@ import React from 'react'
 import { push } from 'connected-react-router'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-
 import '../../GBComponents/GBStyleSheets'
+
 import GBUserForm from '../../GBComponents/GBUserForm'
 import GBDietOverview from '../../GBComponents/GBDietOverview'
 import GBMenuMaker from '../../GBComponents/GBMenuMaker'
@@ -15,7 +15,11 @@ import {  handleModeChange,
           handleWeightChange,
           handleAimChange,
           handleBodyfatChange,
-          handleActivityChange, } from '../../modules/GBCalculator'
+          handleActivityChange, } from '../../modules/GBMacroCalculator'
+
+import {  handleAddFood,
+          handleQuantityChange,
+          handleRemoveFood, } from '../../modules/GBMenuCalculator'
 
 const Home = (props) => (
   <div className='home'>
@@ -48,29 +52,30 @@ const Home = (props) => (
       energy={props.energy}
       proteins={props.proteins}
       lipids={props.lipids}
-      carbohydrats={props.carbohydrats} />
-    <br />
-    <button 
-      onClick={() => props.changePage()}
-      className='GBPushButton' >
-      About us
-    </button>
+      carbohydrats={props.carbohydrats} 
+      menus={props.menus}
+      currentMacros={props.currentMacros}
+      onAddFood={props.handleAddFood}
+      onQuantityChange={props.handleQuantityChange}
+      onRemoveFood={props.handleRemoveFood} />
   </div>
 )
 
-const mapStateToProps = ({ GBCalculator }) => ({
-  mode: GBCalculator.mode,
-  sex: GBCalculator.sex,
-  age: GBCalculator.age,
-  height: GBCalculator.height,
-  weight: GBCalculator.weight,
-  aim: GBCalculator.aim,
-  bodyfat: GBCalculator.bodyfat,
-  activity: GBCalculator.activity,
-  energy: GBCalculator.energy,
-  proteins: GBCalculator.proteins,
-  lipids: GBCalculator.lipids,
-  carbohydrats: GBCalculator.carbohydrats,
+const mapStateToProps = ({ GBMacroCalculator, GBMenuCalculator }) => ({
+  mode: GBMacroCalculator.mode,
+  sex: GBMacroCalculator.sex,
+  age: GBMacroCalculator.age,
+  height: GBMacroCalculator.height,
+  weight: GBMacroCalculator.weight,
+  aim: GBMacroCalculator.aim,
+  bodyfat: GBMacroCalculator.bodyfat,
+  activity: GBMacroCalculator.activity,
+  energy: GBMacroCalculator.energy,
+  proteins: GBMacroCalculator.proteins,
+  lipids: GBMacroCalculator.lipids,
+  carbohydrats: GBMacroCalculator.carbohydrats,
+  menus: GBMenuCalculator.menus,
+  currentMacros: GBMenuCalculator.macros,
 })
 
 const mapDispatchToProps = dispatch => bindActionCreators({
@@ -82,6 +87,9 @@ const mapDispatchToProps = dispatch => bindActionCreators({
   handleAimChange,
   handleBodyfatChange,
   handleActivityChange,
+  handleAddFood,
+  handleQuantityChange,
+  handleRemoveFood,
   changePage: () => push('/about-us')
 }, dispatch)
 
@@ -89,3 +97,12 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Home)
+
+
+/*
+<button 
+  onClick={() => props.changePage()}
+  className='GBPushButton' >
+  About us
+</button>
+*/

@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux'
-import GBCalculator from './GBCalculator'
+import GBMacroCalculator from './GBMacroCalculator'
+import GBMenuCalculator from './GBMenuCalculator'
 
 export default combineReducers({
-  GBCalculator
+  GBMacroCalculator,
+  GBMenuCalculator
 })

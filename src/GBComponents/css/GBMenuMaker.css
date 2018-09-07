@@ -1,4 +1,4 @@
-.menuMakerPanel {
+.GBMenuMaker {
 	outline: none;
 	cursor: default;
 
@@ -14,68 +14,75 @@
 	margin: 10px;
 
 	color: white;
-	background-color: rgba(5,14,24,0.8);
+	background-color: rgba(5,14,24,0.4);
 	border: 1px solid rgb(81,87,93);
 	border-width: 1px 0px 1px 0px;
 	border-radius: 2px;
 	box-shadow: 0px 0px 10px black;
 }
 
-.mealBox {
+.GBMenuMakerTitle {
+	font-size: 1.2em;
+	margin: 10px;
+	text-shadow: 0px 0px 10px rgb(0,174,255);
+}
+
+.GBMenuSelector {
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	text-align: center;
-	cursor: pointer;
+	flex-wrap: wrap;
+	
+	width: 100%;
 
-	font-size: 1em;
-
-	height: 100px;
-	width: 75px;
-
-	margin: 5px;
-	padding: 5px;
-
-	background-color: rgb(5,14,24);
-	color: rgb(30,95,153);
-	border: 1px solid rgb(30,95,153);
+	background-color: rgba(5,14,24,0.4);
+	border: 1px solid rgb(81,87,93);
+	border-width: 1px 0px 1px 0px;
 	border-radius: 2px;
 	box-shadow: 0px 0px 10px black;
 }
 
-.mealBox:hover {
-	border-color: white;
-	color: white;
-	box-shadow: 0px 0px 10px rgb(0,174,255);
-}
-
-.activeMealBox {
+.GBMenuEditor {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: center;
-	text-align: center;
-	cursor: pointer;
+	flex-wrap: wrap;
+	margin: 15px;
+	width: 100%;
+}
 
-	font-size: 1em;
+.GBMenuEditorOverview {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
-	height: 205px;
-	width: 190px;
-
+	padding: 10px;
 	margin: 5px;
-	padding: 5px;
 
-	background-color: rgb(39,46,59);
-	color: rgb(255,255,255);
-	
+	color: white;
+	background-color: rgba(5,14,24,0.1);
 	border: 1px solid rgb(81,87,93);
 	border-radius: 2px;
 	box-shadow: 0px 0px 10px black;
 }
 
-.menuTitle {
+.GBMenuEditorTitle {
+	text-align: center;
+	width: 200px;
+	padding: 5px;
+	padding-top: 0px;
+	margin: 2px;
 	font-size: 1.2em;
-	margin: 10px;
 	text-shadow: 0px 0px 10px rgb(0,174,255);
+}
+
+.GBFoodPanel {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+
+	margin: 15px;
 }

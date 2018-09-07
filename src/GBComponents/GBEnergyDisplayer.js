@@ -1,18 +1,13 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 const GBEnergyDisplayer = ({ label, energy, unit }) => (
   <div className='verticalContainer'>
-    <div >{label}:</div>
+    <div >{ label ? label + ':' : null}</div>
     <div className='bubbleContainer'>
-      <div className='dailyIntake'>{energy}</div> 
+      <div className='dailyIntake'>{ Math.round(energy) }</div> 
       <div>{unit}</div>
     </div>
   </div>
 )
-
-GBEnergyDisplayer.propTypes = {
-  
-}
 
 export default GBEnergyDisplayer

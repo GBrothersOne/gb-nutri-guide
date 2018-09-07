@@ -1,0 +1,48 @@
+.GBProgressBar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	margin: 10px;
+
+	border-radius: 2px;
+}
+
+.GBProgressBarLabel {
+	margin-right: 5px;
+}
+
+.GBProgressBarBackground {
+	display: block;
+	position: relative;
+
+	height: 20px;
+	width: 180px;
+
+	padding: 1px;
+
+	background-color: rgba(5,14,24,1);
+	border: 1px solid rgb(81,87,93);
+	border-radius: 2px;
+}
+
+.GBProgressBarIndicator {
+	background-color: rgb(0,122,204);
+	height: 100%;
+	border-radius: 2px;
+}
+
+.GBProgressBarOverflow {
+	background-color: rgb(125,10,13);
+}
+
+.GBProgressBarInfo {
+	white-space: nowrap;
+	font-size: 0.9em;
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	text-shadow: 0px 0px 5px black;
+}

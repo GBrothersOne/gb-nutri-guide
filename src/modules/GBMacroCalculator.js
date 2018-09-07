@@ -1,11 +1,11 @@
-export const MODE_CHANGE = 'GBCalculator/MODE_CHANGE'
-export const SEX_CHANGE = 'GBCalculator/SEX_CHANGE'
-export const AGE_CHANGE = 'GBCalculator/AGE_CHANGE'
-export const HEIGHT_CHANGE = 'GBCalculator/HEIGHT_CHANGE'
-export const WEIGHT_CHANGE = 'GBCalculator/WEIGHT_CHANGE'
-export const AIM_CHANGE = 'GBCalculator/AIM_CHANGE'
-export const BODYFAT_CHANGE = 'GBCalculator/BODYFAT_CHANGE'
-export const ACTIVITY_CHANGE = 'GBCalculator/ACTIVITY_CHANGE'
+export const MODE_CHANGE = 'GBMacroCalculator/MODE_CHANGE'
+export const SEX_CHANGE = 'GBMacroCalculator/SEX_CHANGE'
+export const AGE_CHANGE = 'GBMacroCalculator/AGE_CHANGE'
+export const HEIGHT_CHANGE = 'GBMacroCalculator/HEIGHT_CHANGE'
+export const WEIGHT_CHANGE = 'GBMacroCalculator/WEIGHT_CHANGE'
+export const AIM_CHANGE = 'GBMacroCalculator/AIM_CHANGE'
+export const BODYFAT_CHANGE = 'GBMacroCalculator/BODYFAT_CHANGE'
+export const ACTIVITY_CHANGE = 'GBMacroCalculator/ACTIVITY_CHANGE'
 // Daily Energy Expenditure ratios (%)
 const RA_CUT = -10
 const RA_KEEP = 0

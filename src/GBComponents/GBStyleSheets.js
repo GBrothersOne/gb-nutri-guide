@@ -7,3 +7,7 @@ import './css/GBCloseButton.css';
 import './css/GBPushButton.css';
 import './css/GBSelectInput.css';
 import './css/GBWriteInput.css';
+import './css/GBMenuBox.css';
+import './css/GBFoodBox.css';
+import './css/GBMenuElement.css';
+import './css/GBProgressBar.css';

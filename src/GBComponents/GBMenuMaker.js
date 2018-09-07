@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
-import GBMacroDisplayer from './GBMacroDisplayer'
+
+import GBMenuSelector from './GBMenuSelector'
+import GBMenuEditor from './GBMenuEditor'
+import GBMenuEvaluator from './GBMenuEvaluator'
 
 const BUTTON_READY = 'Création de menu'
 const BUTTON_NOT_READY = 'Formulaire incomplet'
@@ -8,6 +11,9 @@ class GBMenuMaker extends Component {
 
 	constructor(props) {
 		super(props)
+		this.state = {
+			activeMenu: '',
+		}
 	}
 
 	handleButtonClick = (event) => {
@@ -18,45 +24,51 @@ class GBMenuMaker extends Component {
 		this.props.onModeChange('form')
 	}
 
+	handleMenuSelected = (menu) => {
+		this.setState({ activeMenu: menu })
+	}
+
+	handleAddFood = (food) => {
+		const { activeMenu } = this.state
+		this.props.onAddFood(activeMenu, food)
+	}
+
+	handleRemoveFood = (name) => {
+		const { activeMenu } = this.state
+		this.props.onRemoveFood(activeMenu, name)
+	}
+
 	render() {
+
+		const { activeMenu } = this.state
 		
-		const { mode, energy, proteins, lipids, carbohydrats } = this.props
+		const { mode, energy, proteins, lipids, carbohydrats, menus, currentMacros } = this.props
+
+		const targetMacros = {
+			proteins: proteins,
+			lipids: lipids,
+			carbohydrats: carbohydrats,
+		}
 
 		const ready = energy && proteins && lipids && carbohydrats
 
 		if ( mode === 'menuMaker') {
 			return (
-				<div className='menuMakerPanel'>
-					<button 
-						className='GBCloseButton'
-						onClick={this.handleCloseClick} >
-					</button>
-					<div className='menuTitle'>ÉDITEUR DE MENUS</div>
-					<div className='horizontalContainer'>
-						<div className='mealBox'>Petit déjeuner</div>
-						<div className='mealBox'>Déjeuner</div>
-						<div className='mealBox'>Souper</div>
-						<div className='mealBox'>Collations</div>
-					</div>
-					<div className='activeMealBox'>
-						Déjeuner
-						<GBMacroDisplayer
-						label="Brocoli"
-						value={250}
-						unit="g" />
-						<GBMacroDisplayer
-						label="Poulet"
-						value={250}
-						unit="g" />
-						<GBMacroDisplayer
-						label="Riz"
-						value={250}
-						unit="g" />
-						<GBMacroDisplayer
-						label="Huile d'olive"
-						value={250}
-						unit="g" />
-					</div>
+				<div className='GBMenuMaker'>
+					<button className='GBCloseButton' onClick={this.handleCloseClick} />
+					<div className='GBMenuMakerTitle'>ÉDITEUR DE MENUS</div>
+					<GBMenuSelector
+						menus={menus}
+						activeMenu={activeMenu}
+						onMenuSelected={this.handleMenuSelected} />
+					<GBMenuEditor 
+						menu={menus[activeMenu]}
+						onAddFood={this.handleAddFood}
+						onQuantityChange={(name, quantity) => this.props.onQuantityChange(activeMenu, name, quantity)}
+						onRemoveFood={this.handleRemoveFood} />
+					<GBMenuEvaluator 
+						currentMacros={currentMacros}
+						targetMacros={targetMacros} />
 				</div>
 			)
 		}

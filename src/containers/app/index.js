@@ -10,12 +10,15 @@ const App = () => (
       <Route exact path="/" component={Home} />
       <Route exact path="/about-us" component={About} />
     </main>
-    <footer className='horizontalContainer'>
-      <Link to="/">Home</Link>
-      <span> - </span>
-      <Link to="/about-us">About</Link>
-    </footer>
   </div>
 )
 
 export default App
+
+/*
+<footer className='horizontalContainer'>
+<Link to="/">Home</Link>
+<span> - </span>
+<Link to="/about-us">About</Link>
+</footer>
+*/
