@@ -26,11 +26,11 @@ const DEF_BDF = 20
 
 const initialState = {
   sex: 'male',
-  age: '25',
-  height: '172',
-  weight: '72',
+  age: '',
+  height: '',
+  weight: '',
   bodyfat: '',
-  activity: '1.6',
+  activity: '',
   aim: '',
   energy: '',
   proteins: '',

@@ -18,6 +18,14 @@
 	box-shadow: 0px 0px 10px black;
 }
 
+.displayer.active {
+
+}
+
+.displayer.inactive {
+	display: none;
+}
+
 .displayer:hover {
 	border-color: rgb(131,136,140);
 }

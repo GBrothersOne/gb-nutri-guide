@@ -46,18 +46,19 @@ class GBMenuMaker extends Component {
 
 		return (
 			<div className={`GBMenuMaker ${mode === modes.editor ? 'active' : 'inactive'}`}>
-				<div className='verticalContainer'>
+				
 					<div className='GBMenuMakerTitle'>ÉDITEUR DE MENUS</div>
 					<div className='separator'></div>
 					
-					<GBMenuEvaluator 
-					currentMacros={currentMacros}
-					targetMacros={targetMacros} />
-				</div>
+					
+				
 				<GBMenuSelector
 					menus={menus}
 					activeMenu={activeMenu}
 					onMenuSelected={this.handleMenuSelected} />
+					<GBMenuEvaluator 
+					currentMacros={currentMacros}
+					targetMacros={targetMacros} />
 				<GBMenuEditor 
 					menu={menus[activeMenu]}
 					onAddFood={(food) => this.props.onAddFood(activeMenu, food)}

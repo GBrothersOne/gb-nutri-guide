@@ -5,7 +5,6 @@ import About from '../about'
 
 const App = () => (
   <div className='app'>
-    <header>My-Nutri-Kit</header>
     <main>
       <Route exact path="/" component={Home} />
       <Route exact path="/about-us" component={About} />
@@ -16,6 +15,7 @@ const App = () => (
 export default App
 
 /*
+<header>My-Nutri-Kit</header>
 <footer className='horizontalContainer'>
 <Link to="/">Home</Link>
 <span> - </span>

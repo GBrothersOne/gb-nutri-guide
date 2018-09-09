@@ -5,6 +5,7 @@ const initialState = {
   modes: {
     form: 'form',
     editor: 'editor',
+    overview: 'overview',
   }
 }
 

@@ -21,7 +21,8 @@ const AIM_CUT = 'Perte de graisse'
 const AIM_KEEP = 'Entretien physique'
 const AIM_BULK = 'Prise de masse'
 const ACTIVITY_PLACEHOLDER = "Niveau d'activité"
-const BUTTON_LABEL = 'Créer son menu'
+const BUTTON_LABEL_EDITOR = 'Créer son menu'
+const BUTTON_LABEL_OVERVIEW = 'Voir le bilan'
 const BUTTON_LABEL_DISABLED = 'Formulaire incomplet'
 const ACTIVITY_HELP = {
 	level0: "▸ 1.2 = Sédentaire",
@@ -88,8 +89,14 @@ class GBUserForm extends Component {
 				<button 
 					className='GBPushButton' 
 					disabled={ !ready }
+					onClick={() => this.props.onModeChange(modes.overview)} >
+					{ ready ? BUTTON_LABEL_OVERVIEW : BUTTON_LABEL_DISABLED }
+				</button>
+				<button 
+					className='GBPushButton' 
+					disabled={ !ready }
 					onClick={() => this.props.onModeChange(modes.editor)} >
-					{ ready ? BUTTON_LABEL : BUTTON_LABEL_DISABLED }
+					{ ready ? BUTTON_LABEL_EDITOR : BUTTON_LABEL_DISABLED }
 				</button>
 			</div>
 		)

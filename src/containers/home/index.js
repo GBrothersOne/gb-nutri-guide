@@ -43,7 +43,14 @@ const Home = (props) => (
       onActivityChange={props.handleActivityChange}
       aim={props.aim}
       onAimChange={props.handleAimChange} />
-    
+    <GBDietOverview 
+      modes={props.modes}
+      mode={props.mode}
+      onModeChange={props.handleModeChange}
+      energy={props.energy}
+      proteins={props.proteins}
+      lipids={props.lipids}
+      carbohydrats={props.carbohydrats} />
     <GBMenuMaker 
       modes={props.modes}
       mode={props.mode}
@@ -106,11 +113,5 @@ export default connect(
   About us
 </button>
 
-<GBDietOverview 
-      mode={props.mode}
-      onModeChange={props.handleModeChange}
-      energy={props.energy}
-      proteins={props.proteins}
-      lipids={props.lipids}
-      carbohydrats={props.carbohydrats} />
+
 */
