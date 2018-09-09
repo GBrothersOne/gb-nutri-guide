@@ -5,7 +5,7 @@ import About from '../about'
 
 const App = () => (
   <div className='app'>
-    <header>Application</header>
+    <header>My-Nutri-Kit</header>
     <main>
       <Route exact path="/" component={Home} />
       <Route exact path="/about-us" component={About} />

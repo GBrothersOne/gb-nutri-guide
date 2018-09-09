@@ -12,7 +12,7 @@ class GBMenuEditor extends Component {
 		return ( menu ? (
 			<div className='GBMenuEditor'>
 				<div className='GBMenuEditorOverview'>
-					<div className='GBMenuEditorTitle'>{menu.label}</div>
+					<div className='emptyElement'>{menu.label}</div>
 					{menu.components.map( (component) => ( 
 						<GBMenuElement 
 							key={component.name}

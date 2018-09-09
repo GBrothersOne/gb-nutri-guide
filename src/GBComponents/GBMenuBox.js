@@ -20,7 +20,7 @@ class GBMenuBox extends Component {
 						energy={energy}
 						unit={ENERGY_UNIT} />
 				</div>
-				<div className='GBMenuBoxLabel' >{label}</div>
+				<div className={`GBMenuBoxLabel ${active ? 'active' : 'inactive'}`} >{label}</div>
 			</div>
 		)
 	}

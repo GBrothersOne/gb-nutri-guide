@@ -1,0 +1,59 @@
+.GBMenuEditor {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 5px;
+	width: 100%;
+}
+
+.GBMenuEditorOverview {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	padding: 5px;
+	margin: 5px;
+
+	color: white;
+	background-color: rgba(255,255,255,0.1);
+	
+	border-radius: 2px;
+	
+}
+
+.GBMenuEditorTitle {
+	text-align: center;
+	width: 200px;
+	padding: 5px;
+	padding-top: 0px;
+	margin: 2px;
+	font-size: 1.2em;
+	text-shadow: 0px 0px 10px rgb(0,174,255);
+}
+
+.GBFoodPanel {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+
+	margin: 15px;
+}
+
+.emptyElement {
+	position:relative;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	margin: 2px;
+	width: 200px;
+	background-color: rgba(255,255,255,0.2);
+	border-radius: 2px;
+}

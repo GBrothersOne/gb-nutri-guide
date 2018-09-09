@@ -11,3 +11,6 @@ import './css/GBMenuBox.css';
 import './css/GBFoodBox.css';
 import './css/GBMenuElement.css';
 import './css/GBProgressBar.css';
+import './css/GBActivityInput.css';
+import './css/GBBodyfatInput.css';
+import './css/GBMenuEditor.css';

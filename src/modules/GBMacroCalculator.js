@@ -1,4 +1,3 @@
-export const MODE_CHANGE = 'GBMacroCalculator/MODE_CHANGE'
 export const SEX_CHANGE = 'GBMacroCalculator/SEX_CHANGE'
 export const AGE_CHANGE = 'GBMacroCalculator/AGE_CHANGE'
 export const HEIGHT_CHANGE = 'GBMacroCalculator/HEIGHT_CHANGE'
@@ -6,6 +5,7 @@ export const WEIGHT_CHANGE = 'GBMacroCalculator/WEIGHT_CHANGE'
 export const AIM_CHANGE = 'GBMacroCalculator/AIM_CHANGE'
 export const BODYFAT_CHANGE = 'GBMacroCalculator/BODYFAT_CHANGE'
 export const ACTIVITY_CHANGE = 'GBMacroCalculator/ACTIVITY_CHANGE'
+
 // Daily Energy Expenditure ratios (%)
 const RA_CUT = -10
 const RA_KEEP = 0
@@ -25,13 +25,12 @@ const RT_LP_BULK = 1.4
 const DEF_BDF = 20
 
 const initialState = {
-  mode: 'form',
   sex: 'male',
-  age: '',
-  height: '',
-  weight: '',
+  age: '25',
+  height: '172',
+  weight: '72',
   bodyfat: '',
-  activity: '',
+  activity: '1.6',
   aim: '',
   energy: '',
   proteins: '',
@@ -41,11 +40,6 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case MODE_CHANGE:
-      return {
-        ...state,
-        mode: action.mode
-      }
 
     case SEX_CHANGE:
       return processing({
@@ -91,15 +85,7 @@ export default (state = initialState, action) => {
 
     default:
       return state
-  }
-}
 
-export const handleModeChange = (mode) => {
-  return dispatch => {
-    dispatch({
-      type: MODE_CHANGE,
-      mode: mode
-    })
   }
 }
 

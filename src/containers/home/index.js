@@ -8,8 +8,9 @@ import GBUserForm from '../../GBComponents/GBUserForm'
 import GBDietOverview from '../../GBComponents/GBDietOverview'
 import GBMenuMaker from '../../GBComponents/GBMenuMaker'
 
-import {  handleModeChange,
-          handleSexChange,
+import {  handleModeChange, } from '../../modules/GBStateCalculator'
+
+import {  handleSexChange,
           handleAgeChange,
           handleHeightChange,
           handleWeightChange,
@@ -21,10 +22,13 @@ import {  handleAddFood,
           handleQuantityChange,
           handleRemoveFood, } from '../../modules/GBMenuCalculator'
 
+
 const Home = (props) => (
   <div className='home'>
     <GBUserForm
+      modes={props.modes}
       mode={props.mode}
+      onModeChange={props.handleModeChange}
       sex={props.sex}
       onSexChange={props.handleSexChange}
       age={props.age}
@@ -39,14 +43,9 @@ const Home = (props) => (
       onActivityChange={props.handleActivityChange}
       aim={props.aim}
       onAimChange={props.handleAimChange} />
-    <GBDietOverview 
-      mode={props.mode}
-      onModeChange={props.handleModeChange}
-      energy={props.energy}
-      proteins={props.proteins}
-      lipids={props.lipids}
-      carbohydrats={props.carbohydrats} />
+    
     <GBMenuMaker 
+      modes={props.modes}
       mode={props.mode}
       onModeChange={props.handleModeChange}
       energy={props.energy}
@@ -61,8 +60,9 @@ const Home = (props) => (
   </div>
 )
 
-const mapStateToProps = ({ GBMacroCalculator, GBMenuCalculator }) => ({
-  mode: GBMacroCalculator.mode,
+const mapStateToProps = ({ GBStateCalculator, GBMacroCalculator, GBMenuCalculator }) => ({
+  modes: GBStateCalculator.modes,
+  mode: GBStateCalculator.mode,
   sex: GBMacroCalculator.sex,
   age: GBMacroCalculator.age,
   height: GBMacroCalculator.height,
@@ -105,4 +105,12 @@ export default connect(
   className='GBPushButton' >
   About us
 </button>
+
+<GBDietOverview 
+      mode={props.mode}
+      onModeChange={props.handleModeChange}
+      energy={props.energy}
+      proteins={props.proteins}
+      lipids={props.lipids}
+      carbohydrats={props.carbohydrats} />
 */

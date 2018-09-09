@@ -50,17 +50,15 @@ class GBBodyfatInput extends Component {
 						<span className='GBCheckOptionMark'></span>
 					</label>
 				</div>
-				{ bodyfatActive &&
-					<div>
-						<input
-							type='number'
-							className='GBWriteInput'
-							placeholder={placeholder}
-							disabled={this.state.bodyfatState === 'unknown'}
-							value={bodyfat}
-							onChange={this.handleValueChange} />
-					</div>
-				}
+				<div className={`bodyfatInput ${bodyfatActive ? 'active' : 'inactive'}`}>
+					<input
+						type='number'
+						className='GBWriteInput'
+						placeholder={placeholder}
+						disabled={this.state.bodyfatState === 'unknown'}
+						value={bodyfat}
+						onChange={this.handleValueChange} />
+				</div>
 			</div>
 		)
 	}

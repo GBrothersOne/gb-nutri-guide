@@ -62,25 +62,23 @@ class GBActivityInput extends Component {
 					value={activity}
 					onFocus={this.handleFocus}
 					onChange={this.handleChange} />
-				{ focused &&
-					<div className='helpMessage'>
-						<div className='helpButton' data-activity={1.2} onClick={this.handleSetActivity} >
-							{helpMessages.level0}
-						</div>
-						<div className='helpButton' data-activity={1.4} onClick={this.handleSetActivity}>
-							{helpMessages.level1}
-						</div>
-						<div className='helpButton' data-activity={1.6} onClick={this.handleSetActivity}>
-							{helpMessages.level2}
-						</div>
-						<div className='helpButton' data-activity={1.8} onClick={this.handleSetActivity}>
-							{helpMessages.level3}
-						</div>
-						<div className='helpButton' data-activity={2.0} onClick={this.handleSetActivity}>
-							{helpMessages.level4}
-						</div>
-					</div> 
-				}
+				<div className={`helpMessage ${focused ? 'active' : 'inactive'}`}>
+					<div className='helpButton' data-activity={1.2} onClick={this.handleSetActivity} >
+						{helpMessages.level0}
+					</div>
+					<div className='helpButton' data-activity={1.4} onClick={this.handleSetActivity}>
+						{helpMessages.level1}
+					</div>
+					<div className='helpButton' data-activity={1.6} onClick={this.handleSetActivity}>
+						{helpMessages.level2}
+					</div>
+					<div className='helpButton' data-activity={1.8} onClick={this.handleSetActivity}>
+						{helpMessages.level3}
+					</div>
+					<div className='helpButton' data-activity={2.0} onClick={this.handleSetActivity}>
+						{helpMessages.level4}
+					</div>
+				</div> 
 			</div>
 		)
 	}
