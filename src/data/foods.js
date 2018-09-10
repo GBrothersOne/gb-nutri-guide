@@ -2,9 +2,10 @@ export default [
 	{
 		name: "broccoli",
 		label: "Brocoli",
+		portion: "100",
 		unit: "g",
 		picture: require('./img/broccoli.png'),
-		description: "Cuits à l'eau ou à la vapeur",
+		description: "Broccoli cuit à la vapeur à feu doux pour pas âbimer ",
 		macros: {
 			base: "100",
 			energy: "22.8",
@@ -16,6 +17,7 @@ export default [
 	{
 		name: "chickenBreast",
 		label: "Poulet",
+		portion: "100",
 		unit: "g",
 		picture: require('./img/chickenBreast.png'),
 		description: "Filets de poulet cuits",
@@ -30,6 +32,7 @@ export default [
 	{
 		name: "pasta",
 		label: "Pâtes",
+		portion: "100",
 		unit: "g",
 		picture: require('./img/pasta.png'),
 		description: "Pâtes standard cuites",
@@ -44,6 +47,7 @@ export default [
 	{
 		name: "brownRice",
 		label: "Riz",
+		portion: "100",
 		unit: "g",
 		picture: require('./img/brownRice.png'),
 		description: "Riz complet cuit",
@@ -58,6 +62,7 @@ export default [
 	{
 		name: "friedEgg",
 		label: "Oeufs",
+		portion: "50",
 		unit: "g",
 		picture: require('./img/friedEgg.png'),
 		description: "Oeufs au plat (calibre moyen) sans matière grasse",

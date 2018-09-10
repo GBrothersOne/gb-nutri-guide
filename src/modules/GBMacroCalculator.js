@@ -23,7 +23,7 @@ const RT_LP_KEEP = 1.0
 const RT_LP_BULK = 1.4
 // Default bodyfat
 const DEF_BDF = 20
-
+/*
 const initialState = {
   sex: 'male',
   age: '',
@@ -31,6 +31,20 @@ const initialState = {
   weight: '',
   bodyfat: '',
   activity: '',
+  aim: '',
+  energy: '',
+  proteins: '',
+  lipids: '',
+  carbohydrats: '',
+}
+*/
+const initialState = {
+  sex: 'male',
+  age: '25',
+  height: '172',
+  weight: '70',
+  bodyfat: '',
+  activity: '1.4',
   aim: '',
   energy: '',
   proteins: '',

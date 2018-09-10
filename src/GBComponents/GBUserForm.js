@@ -6,6 +6,7 @@ import GBWeightInput from './GBWeightInput'
 import GBBodyfatInput from './GBBodyfatInput'
 import GBActivityInput from './GBActivityInput'
 import GBAimInput from './GBAimInput'
+import GBDietOverview from './GBDietOverview'
 
 // Visual texts
 const TITLE = 'DONNÉES DE CALCUL'
@@ -40,6 +41,8 @@ class GBUserForm extends Component {
 		const { modes, mode } = this.props
 
 		const { sex, age, height, weight, bodyfat, activity, aim } =  this.props
+
+		const { energy, proteins, lipids, carbohydrats } = this.props
 
 		const ready = ( sex && age && height && weight && !isNaN(activity) && activity && aim )
 
@@ -85,13 +88,11 @@ class GBUserForm extends Component {
 					onActivityChange={this.props.onActivityChange}
 					placeholder={ACTIVITY_PLACEHOLDER} 
 					helpMessages={ACTIVITY_HELP} />
-					<br/>
-				<button 
-					className='GBPushButton' 
-					disabled={ !ready }
-					onClick={() => this.props.onModeChange(modes.overview)} >
-					{ ready ? BUTTON_LABEL_OVERVIEW : BUTTON_LABEL_DISABLED }
-				</button>
+				<GBDietOverview 
+					energy={energy}
+					proteins={proteins}
+					lipids={lipids}
+					carbohydrats={carbohydrats} />
 				<button 
 					className='GBPushButton' 
 					disabled={ !ready }

@@ -10,24 +10,28 @@ const initialState = {
       label: "Petit déjeuner",
       components: [],
       energy: 0,
+      part: 25,
     },
     meal: {
       name: 'meal',
       label: "Déjeuner",
       components: [],
       energy: 0,
+      part: 35,
     },
     supper: {
       name: 'supper',
       label: "Dîner",
       components: [],
       energy: 0,
+      part: 30,
     },
     snack: {
       name: 'snack',
       label: "Collations",
       components: [],
       energy: 0,
+      part: 10,
     },
   },
   macros: {
@@ -46,7 +50,7 @@ export default (state = initialState, action) => {
         addComponents.push({
            name: action.food.name, 
            label: action.food.label,
-           quantity: '',
+           quantity: action.food.portion,
            unit: action.food.unit 
         })
       }

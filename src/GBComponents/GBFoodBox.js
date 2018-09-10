@@ -6,7 +6,11 @@ class GBFoodBox extends Component {
 		const { label, picture } = this.props
 		const style = { backgroundImage: `url(${picture})` }
 		return (
-			<div className='GBFoodBox' onClick={this.props.onAddFood}>
+			<div 
+				className='GBFoodBox' 
+				onClick={this.props.onAddFood} 
+				onMouseOver={this.props.onMouseOver}
+				onMouseOut={this.props.onMouseOut} >
 				<div className='GBFoodBoxBackground' style={style}></div>
 				<div className='GBFoodBoxLabel'>{label}</div>
 			</div>

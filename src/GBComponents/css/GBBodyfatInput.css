@@ -1,13 +1,14 @@
 .bodyfatInput {
 	overflow: hidden;
+	transition: all 200ms ease-out;
 }
 
 .bodyfatInput.active {
-	transition: max-height 200ms ease-out;
 	max-height: 50px;
+	opacity: 1;
 }
 
 .bodyfatInput.inactive {
-	transition: max-height 200ms ease-out;
 	max-height: 0px;
+	opacity: 0;
 }

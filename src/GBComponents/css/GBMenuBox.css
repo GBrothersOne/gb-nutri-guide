@@ -13,7 +13,7 @@
 }
 
 .GBMenuBoxContainer.active {
-	border: 1px solid rgb(38,186,255);
+	border: 1px solid rgb(0,174,255);
 }
 
 .GBMenuBoxContainer:hover .GBMenuBoxBackground {
@@ -42,7 +42,7 @@
 }
 
 .GBMenuBoxLabel.active {
-	color: rgb(38,186,255);
+	color: rgb(0,174,255);
 }
 
 .GBMenuBoxActiveLayer {
@@ -70,6 +70,25 @@
 .inactive .GBMenuBoxActiveLayer {
 	margin-top: 75%;
 	opacity: 0;
+}
+
+.GBMenuBoxEnergyArea {
+	padding: 5px;
+	padding-right: 10px;
+	padding-left: 10px;
+
+	margin: 5px;
+
+	text-align: center;
+	color: rgb(0,174,255);
+	
+	background-color: rgb(5,14,24);
+	border: 1px solid rgb(81,87,93);
+	border-radius: 20px;
+}
+
+.GBMenuBoxEnergyAreaInfo {
+	color: rgba(255,255,255,0.6);
 }
 
 .breakfast {

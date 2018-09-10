@@ -3,11 +3,22 @@ import GBMenuElement from './GBMenuElement'
 import GBFoodBox from './GBFoodBox'
 import foods from '../data/foods'
 
+const DEFAULT_FOOD_INFO = "Cliquer sur un aliment pour l'ajouter"
+
 class GBMenuEditor extends Component {
+
+	constructor(props) {
+		super(props)
+		this.state = {
+			foodInfo: DEFAULT_FOOD_INFO
+		}
+	}
 
 	render() {
 
 		const { menu } = this.props
+
+		const { foodInfo } = this.state
 
 		return ( menu ? (
 			<div className='GBMenuEditor'>
@@ -29,9 +40,12 @@ class GBMenuEditor extends Component {
 							key={food.name}
 							label={food.label}
 							picture={food.picture}
+							onMouseOver={() => this.setState({ foodInfo: food.description})}
+							onMouseOut={() => this.setState({ foodInfo: DEFAULT_FOOD_INFO})}
 							onAddFood={() => this.props.onAddFood(food)} />
 					))}
 				</div>
+				<div className='GBFoodInfo'>{foodInfo}</div>
 			</div> ): null
 		)
 	}

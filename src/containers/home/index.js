@@ -5,7 +5,6 @@ import { connect } from 'react-redux'
 import '../../GBComponents/GBStyleSheets'
 
 import GBUserForm from '../../GBComponents/GBUserForm'
-import GBDietOverview from '../../GBComponents/GBDietOverview'
 import GBMenuMaker from '../../GBComponents/GBMenuMaker'
 
 import {  handleModeChange, } from '../../modules/GBStateCalculator'
@@ -42,11 +41,7 @@ const Home = (props) => (
       activity={props.activity}
       onActivityChange={props.handleActivityChange}
       aim={props.aim}
-      onAimChange={props.handleAimChange} />
-    <GBDietOverview 
-      modes={props.modes}
-      mode={props.mode}
-      onModeChange={props.handleModeChange}
+      onAimChange={props.handleAimChange}
       energy={props.energy}
       proteins={props.proteins}
       lipids={props.lipids}

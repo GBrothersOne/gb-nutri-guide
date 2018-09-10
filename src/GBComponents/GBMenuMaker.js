@@ -54,9 +54,10 @@ class GBMenuMaker extends Component {
 				
 				<GBMenuSelector
 					menus={menus}
+					targetEnergy={energy}
 					activeMenu={activeMenu}
 					onMenuSelected={this.handleMenuSelected} />
-					<GBMenuEvaluator 
+				<GBMenuEvaluator 
 					currentMacros={currentMacros}
 					targetMacros={targetMacros} />
 				<GBMenuEditor 
