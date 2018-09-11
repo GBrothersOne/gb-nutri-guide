@@ -23,7 +23,7 @@ const RT_LP_KEEP = 1.0
 const RT_LP_BULK = 1.4
 // Default bodyfat
 const DEF_BDF = 20
-/*
+
 const initialState = {
   sex: 'male',
   age: '',
@@ -37,7 +37,7 @@ const initialState = {
   lipids: '',
   carbohydrats: '',
 }
-*/
+/*
 const initialState = {
   sex: 'male',
   age: '25',
@@ -50,7 +50,7 @@ const initialState = {
   proteins: '',
   lipids: '',
   carbohydrats: '',
-}
+}*/
 
 export default (state = initialState, action) => {
   switch (action.type) {

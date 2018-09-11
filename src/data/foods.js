@@ -5,7 +5,7 @@ export default [
 		portion: "100",
 		unit: "g",
 		picture: require('./img/broccoli.png'),
-		description: "Broccoli cuit à la vapeur à feu doux pour pas âbimer ",
+		description: "Broccoli cuit",
 		macros: {
 			base: "100",
 			energy: "22.8",
@@ -35,7 +35,7 @@ export default [
 		portion: "100",
 		unit: "g",
 		picture: require('./img/pasta.png'),
-		description: "Pâtes standard cuites",
+		description: "Pâtes standard cuites sèches",
 		macros: {
 			base: "100",
 			energy: "126",
